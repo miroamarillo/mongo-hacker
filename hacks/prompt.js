@@ -5,7 +5,6 @@ prompt = function() {
     var process = serverstatus.process;
     // var version = db.serverBuildInfo().version;
     var icon = "\uf096";
-    var colorIcon = colorizeAll(icon, mongo_hacker_config['colors']['databaseNames']);
     var repl_set = db._adminCommand({"replSetGetStatus": 1}).ok !== 0;
     var rs_state = '';
     if(repl_set) {
@@ -20,6 +19,6 @@ prompt = function() {
     }
     var state = isMongos() ? '[mongos]' : rs_state;
     // return host + '(' + process + '-' + version + ')' + state + ' ' + db + '> ';
-    return host + state + ' ' + colorIcon + ' ' + db + '> ';
+    return host + state + ' ' + icon + ' ' + db + '> ';
 };
 
