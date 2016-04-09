@@ -4,7 +4,7 @@ prompt = function() {
     var host = serverstatus.host.split('.')[0];
     var process = serverstatus.process;
     // var version = db.serverBuildInfo().version;
-    var icon = "\uf096";
+    var icon = colorize("\uf096", {color: "cyan"});
     var repl_set = db._adminCommand({"replSetGetStatus": 1}).ok !== 0;
     var rs_state = '';
     if(repl_set) {
@@ -19,6 +19,6 @@ prompt = function() {
     }
     var state = isMongos() ? '[mongos]' : rs_state;
     // return host + '(' + process + '-' + version + ')' + state + ' ' + db + '> ';
-    return host + state + ' ' + colorize(icon, {color: "cyan"}) + ' ' + db + '> ';
+    return host + state + ' ' + icon + ' ' + db + '> ';
 };
 
