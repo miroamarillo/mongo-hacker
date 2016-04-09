@@ -19,6 +19,6 @@ prompt = function() {
     }
     var state = isMongos() ? '[mongos]' : rs_state;
     // return host + '(' + process + '-' + version + ')' + state + ' ' + db + '> ';
-    return host + state + ' ' + icon + ' ' + db + '> ';
+    return host + state + ' ' + colorize(icon, {color: "cyan"}) + ' ' + db + '> ';
 };
 
