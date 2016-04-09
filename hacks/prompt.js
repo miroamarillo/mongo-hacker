@@ -4,7 +4,7 @@ prompt = function() {
     var host = serverstatus.host.split('.')[0];
     var process = serverstatus.process;
     // var version = db.serverBuildInfo().version;
-    var icon = colorize("\uf096", {color: "cyan"});
+    var icon = "\uf096";
     var repl_set = db._adminCommand({"replSetGetStatus": 1}).ok !== 0;
     var rs_state = '';
     if(repl_set) {
