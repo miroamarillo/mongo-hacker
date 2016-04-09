@@ -10,6 +10,31 @@
 
 # MongoDB Shell Enhancements
 
+##Updates from fork
+
+* Added database icon to the prompt (Octicons)
+* Removed `(process-version)` from the prompt
+	![db icon](https://raw.githubusercontent.com/miroamarillo/mongo-hacker/master/screenshot.png)
+
+
+##Install Octicons on your mac
+
+
+	brew install caskroom/cask/brew-cask
+	brew tap "caskroom/fonts"
+	brew cask install "font-octicons"
+	
+### Set Non-ASCII Font in iTerm 2
+
+Go to Preferences > Profiles.  Select your profile and choose The **Text** tab on the right panel.  Change the Non-ASCII font option to **github-octicons**.
+
+Close iTerm and open it again.  Test that your font is working:
+
+	echo "\uf008"      #Should print the octiface
+	
+For reference on the icons and unicodes, go to [Github Octicons](https://octicons.github.com/).
+
+
 ## Warnings
 
 * These enhancements are useful to me but they don't make sense for everyone. Feel free to tweak to your desire and please submit [feedback or pull requests](https://github.com/TylerBrock/mongo-hacker/issues).
@@ -17,6 +42,14 @@
 * Updates called on existing cursors are new and experimental (see notes in API section)
 
 ## Installation
+
+###to install this repo as a global npm package
+
+````sh
+npm install -g https://github.com/miroamarillo/mongo-hacker.git
+````
+
+###to install original
 
 ```sh
 npm install -g mongo-hacker
